@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://timmcben.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://timmcben.github.io/media/css/live2d.css">
+    <link rel="stylesheet" href="https://timmcben.github.io/styles/main.css">
+    <script src="https://timmcben.github.io/media/js/valine.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <meta name="description" content="秋风清 秋月明" />
+    <meta http-equiv="x-pjax-version" content="v123">
+    <title>TimMCBen' Blog</title>
+</head>
+
+
+<body>
+    <div id="content">
+        <div class="nav-large">
+            <div class="row">
+                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+                
+                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
+                <!------------------ 顶部菜单栏html👇--------->
+                 
+                <!------------------ 顶部菜单栏html👆--------->
+                </div>
+            </div>
+            <div id="bg">
+            </div>
+            <!------- 背景图加载方式👇----- -->
+            <div id="bgchoice" style="display: none">
+            </div>
+            
+            <div id="bgurl" style="display:none"></div>
+            
+            <!------- 背景图加载方式👆----- --> 
+        <div id="landlord">
+            <div class="message" style="opacity:0"></div>
+            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+        </div>
+    </div>
+        
+    <div id="domainname" style="display:none">https://timmcben.github.io
+        </div>
+
+<!-------------------- live2d功能👇 --------------------------->
+    
+<!-------------------- live2d功能👆 --------------------------->
+
+<!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
+<script>
+    var bgchoice = ""
+    var bg = $('#bg');
+    var bgurl = document.getElementById("bgurl").innerHTML;
+    if (bgchoice == 'default')
+    {
+        for (var i = 0; i < 3; i++)
+            bgurl = bgurl.replace("\\", "/");
+        bgurl = "https://timmcben.github.io/" + bgurl;
+    }
+    bg.css("background", "url('" + bgurl + "')");
+
+    window.onload = function () {
+        aplayerbtnInit();
+    }
+</script>
+<!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+
+</body>
+</html>
